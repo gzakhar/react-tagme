@@ -1,13 +1,14 @@
 import './App.css';
-import Tag from './lib';
+import Tag from './lib/index.js';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Edit <code>src/App.js</code> and save to reload. 
         </p>
+        <Tag/>
         <a
           className="App-link"
           href="https://reactjs.org"

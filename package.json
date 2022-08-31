@@ -4,19 +4,20 @@
   "private": false,
   "author": "gzakharov",
   "license": "MIT",
+  "main": "./dist/index.js",
   "peerDependencies": {
     "axios": "^0.27.2",
-    "react": "^18.2.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "react-icons": "^4.4.0",
-    "react-modal": "^3.15.1"
+    "react-modal": "^3.15.1",
+    "react-scripts": "5.0.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.18.10",
     "@babel/core": "^7.18.13",
     "@babel/preset-env": "^7.18.10",
-    "web-vitals": "^2.1.4",
-    "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1"
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -42,7 +43,6 @@
       "last 1 safari version"
     ]
   },
-  "main": "./dist/index.js",
   "files": [
     "README.md",
     "dist"
