@@ -1,7 +1,8 @@
 import { BsFillInfoCircleFill } from "react-icons/bs"
-import { useEffect, useState } from "react"
+import React, { useEffect, useState } from "react"
 import Modal from "react-modal";
 import axios from "axios";
+
 
 const repo = []
 
@@ -85,6 +86,7 @@ function Tag(props) {
         </div>
     )
 
+
 }
 
 
@@ -96,7 +98,6 @@ function UserControl(props) {
     const [tagUpdates, setTagUpdates] = useState({})
     const isAnnotated = props.tag != null;
 
-    let tag;
     const customStyles = {
         content: {
             top: "50%",
@@ -108,6 +109,7 @@ function UserControl(props) {
         },
     };
 
+    let tag;
     if (isAnnotated) {
         if (!(props.tag in repo))
             repo.push(props.tag)
@@ -121,6 +123,7 @@ function UserControl(props) {
         setDocumentation(res.data["description"])
         setLocation(res.data["location"])
     }, [modalOpen])
+
 
     function handleSubmitModal() {
         axios.post(`${TOOLTIP_BASE_URL}/documentation/${tag}`, {
@@ -200,6 +203,7 @@ function UserControl(props) {
             }
         </div>
     )
+
 }
 
 export default UserControl
