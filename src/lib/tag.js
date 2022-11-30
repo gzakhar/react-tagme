@@ -6,9 +6,9 @@ import axios from "axios";
 
 const repo = []
 
-const EDITABLE = process.env.REACT_APP_TOOLTIP_EDIT || true
-const VISIBLE = process.env.REACT_APP_TOOLTIP_VISIBLE || true
-const TOOLTIP_BASE_URL = process.env.REACT_APP_TOOLTIP_BASE_URL || "http://localhost:5000"
+const EDITABLE = ["true", "t", 1].includes(process.env.REACT_APP_TOOLTIP_EDIT.toLocaleLowerCase())
+const VISIBLE = ["true", "t", 1].includes(process.env.REACT_APP_TOOLTIP_VISIBLE.toLocaleLowerCase())
+const TOOLTIP_BASE_URL = process.env.REACT_APP_TOOLTIP_BASE_URL 
 
 
 function Tag(props) {
