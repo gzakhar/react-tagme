@@ -17,8 +17,8 @@ function Tag(props) {
     const [newTag, setNewTag] = useState("")
     const [originalTags, setOriginalTags] = useState({})
 
-    useEffect(async () => {
-        getTags()
+    useEffect(() => {
+        getTags().catch(console.error)
     }, [])
 
     async function handleCreateTag() {
@@ -118,10 +118,14 @@ function UserControl(props) {
         tag = (repo.sort()[repo.length - 1] || 0) + 1
     }
 
-    useEffect(async () => {
-        let res = await axios.get(`${TOOLTIP_BASE_URL}/documentation/${tag}`)
-        setDocumentation(res.data["description"])
-        setLocation(res.data["location"])
+    useEffect(() => {
+        const fetchData = async () => {
+
+            let res = await axios.get(`${TOOLTIP_BASE_URL}/documentation/${tag}`)
+            setDocumentation(res.data["description"])
+            setLocation(res.data["location"])
+        }
+        fetchData().catch(console.error)
     }, [modalOpen])
 
 
