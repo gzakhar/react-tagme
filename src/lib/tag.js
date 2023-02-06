@@ -8,7 +8,7 @@ const repo = []
 
 const EDITABLE = ["true", "t", 1].includes(process.env.REACT_APP_TOOLTIP_EDIT.toLocaleLowerCase())
 const VISIBLE = ["true", "t", 1].includes(process.env.REACT_APP_TOOLTIP_VISIBLE.toLocaleLowerCase())
-const TOOLTIP_BASE_URL = process.env.REACT_APP_TOOLTIP_BASE_URL 
+const TOOLTIP_BASE_URL = process.env.REACT_APP_TOOLTIP_BASE_URL
 
 
 function Tag(props) {
